@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Ffavicon.png?alt=media&token=7d2e607c-3ca6-420f-9a38-523d08e9176d">
+    <title>Muhyadiin Jama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="output.css" rel="stylesheet">
+</head>
+<body class="dark:bg-[#0b243a] dark:text-white">
+
+<!-- ----------------------------Nav bar ----------------------------------->
+ 
+    <nav class="bg-gray-200 dark:bg-[#1e293b] dark:text-white flex shadow-md fixed w-full z-50  px-5 lg:px-8 xl:px-[8%] py-4 justify-between items-center">
+        <div class="flex  py-2 items-center ">
+            <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Flogo%20(1).png?alt=media&token=69e63449-451e-4577-b92e-a723a45ea3c8" alt="logo" class=" h-12 dark:hidden ">
+            <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Flogo%20white.png?alt=media&token=2da3c78f-77c2-478b-a80e-c10f0ed4b0a6" alt="logo" class=" h-12 hidden dark:block">
+            <span class=" py-5 text-lg font-semibold dark:text-white">Muhyadiin Jama</span>
+        </div>
+        <ul class="hidden md:flex items-center gap-6 lg:gap-5 rounded-full px-13 py-3 ">
+            <li><a href="#top" class="text-black hover:text-[#15803d] dark:text-white">Home</a></li>
+            <li><a href="#about" class="text-black hover:text-[#15803d] dark:text-white">About</a></li>
+            <li><a href="#services" class="text-black hover:text-[#15803d] dark:text-white">Services</a></li>
+            <li><a href="#project" class="text-black hover:text-[#15803d] dark:text-white">My project</a></li>
+            <li><a href="#contact" class="text-black hover:text-[#15803d] dark:text-white">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-4 ">
+            <button onclick="toggleTheme()">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fmoon_icon.png?alt=media&token=5ef8e608-58f9-4d98-b421-ff46ac8946bd" alt="" class="w-6 dark:hidden">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fsun_icon.png?alt=media&token=a257d944-cfde-4d80-a56a-a62b42b38dc7" alt="" class="w-6 hidden dark:block">
+            </button>
+           <a href="#contact" class="hidden lg:flex items-center gap-3 py-2.5 px-10 border
+           border-gray-500 rounded-full ml-4  hover:bg-[#15803d] ">  Contact <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Farrow-icon.png?alt=media&token=e835fc27-e722-4026-9dc3-8d3e6c3f71a4" alt="" class="w-3 dark:hidden">
+           <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Farrow-icon-dark.png?alt=media&token=ff8fdec9-b3e9-49cb-a6b5-0aa21386dc86" alt="" class="w-3 hidden dark:block">
+            </a>
+            
+           <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fmenu-black.png?alt=media&token=a322813a-f5c6-4384-bcc1-3296f659aca7" alt="" class="w-6 dark:hidden">
+            <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fmenu-white.png?alt=media&token=04357da9-8099-487c-aec1-4964f57d0e57" alt="" class="w-6 hidden dark:block">
+           </button>
+        </div>
+        <!-- -------------Mobile menu --------------->
+        <ul id="SideMenu" class="flex md:hidden gap-4 flex-col py-20 px-10 fixed -right-64 top-0
+          bottom-0 w-64 z-5- h-screen bg-gray-200 transition duration-500 dark:bg-[#1e293b]">
+          <div class="absolute right-6 top-6" onclick="closeMenu()">
+            <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fclose-black.png?alt=media&token=7f735111-6a15-4ae2-980c-7224457dc075" alt="" class="w-5 cursor-pointer dark:hidden">
+            <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fclose-white.png?alt=media&token=4372f505-990c-409f-a8cd-081331df60dd" alt="" class="w-5 cursor-pointer hidden dark:block">
+          </div>
+          <li><a href="#top" onclick="closeMenu()">Home</a></li>
+          <li><a href="#about"onclick="closeMenu()">About</a></li>
+          <li><a href="#services" onclick="closeMenu()">Services</a></li>
+          <li><a href="#project"onclick="closeMenu()">My project</a></li>
+          <li><a href="#contact"onclick="closeMenu()">Contact</a></li>
+
+         </ul>
+    </nav>
+    
+
+<!------------------------- Hero Section -------------------------------------->
+
+
+<section class="min-h-screen flex flex-col justify-center items-center text-center  py-10 ">
+    <h1 class="text-3xl md:text-4xl font-bold ">Become a Software Engineer</h1>
+    <p class="mt-6 text-lg ">Hey, I'm Muhyadiin <span class="wave">👋</span></p>
+    <p class="text-lg ">I want to make a tech career possible for anyone.</p>
+    <div class="mt-8 space-x-4">
+      <a href="#" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-[#15803d]">Get Started</a>
+      <a href="#contact" class="bg-white border border-green-600  text-black hover:text-white px-6 py-3 rounded hover:bg-[#15803d]">Contact</a>
+    </div>
+  </section>
+
+
+<!----------- --------about me--------------------------- -->
+
+
+ <div id="about" class="w-full px-[12%] py-10 mt-10 dark:bg-[#0b243a] dark:text-white bg-green-300 ">
+    <h4 class="text-center mb-2 text-lg">Introduction</h4>
+    <h2 class="text-center text-5xl">About me</h2>
+    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20 ">
+        <div class="max-w-max mx-auto relative">
+            <img src="https://shorturl.at/ZvHRK" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none">
+        </div>
+        <div class="flex-1">
+            <p class="mb-10 max-w-2xl">I am an experienced Frontend Developer of professional 
+                expertise in the field. Throughout my career, I have had the privilege of 
+                collaborating with prestigious  nd growth.</p>
+                 <ul class="grid grid-cols-1 sm:grid-cols-3  gap-6 max-w-2xl">
+                    <li class="border-[0.5px] pl-3 border-gray-400 rounded cursor-pointer hover:bg-[#fc4ff] hover:-translate-y-1 
+                    duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <img src="https://shorturl.at/mStx9" alt="" class="w-7 mt-3 dark:hidden">
+                        <img src="https://shorturl.at/HxbN9" alt="" class="w-7 mt-3 hidden dark:block">
+                        <h3 class="my-4 font-semibold ">Languages</h3>
+                        <p class=" text-sm">HTML, CSS, JavaScript React Js, Next Js</p>
+                    </li>
+                    <li class="border-[0.5px] pl-3 border-gray-400 rounded cursor-pointer hover:bg-[#fc4ff] hover:-translate-y-1 
+                    duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fedu-icon.png?alt=media&token=6d52b82a-1c74-46b1-9008-3848e19893d5" alt="" class="w-7 mt-3 dark:hidden"  >
+                        <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fedu-icon-dark.png?alt=media&token=fc83cd93-d9de-4535-88f0-8630506abf91" alt="" class="w-7 mt-3  hidden dark:block">
+                        <h3 class="my-4 font-semibold ">Education</h3>
+                        <p class=" text-sm">B.Tech in Computer Science</p>
+                    </li>
+                    <li class="border-[0.5px] pl-3 border-gray-400 rounded cursor-pointer hover:bg-[#fc4ff] hover:-translate-y-1 
+                    duration-500 hover:shadow-[4px_4px_0_#000]">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fproject-icon.png?alt=media&token=16913d79-2ec4-4c53-88e5-647a6795a365" alt="" class="w-7 mt-3 dark:hidden ">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fproject-icon-dark.png?alt=media&token=fb764051-aa7a-4387-aabb-d7808ef804e2" alt="" class="w-7 mt-3 hidden dark:block ">
+                        <h3 class="my-4 font-semibold ">project</h3>
+                        <p class=" text-sm">Built more than 5 projects</p>
+                    </li>
+                 </ul>
+                 <h4 class=" my-6  "> Tools I use</h4>
+                 <ul class="flex items-center gap-3 sm: gap-5">
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400
+                      rounded-lg cursor-pointer hover:hover:-translate-y-1 duration-500 ">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fvscode.png?alt=media&token=5bf15068-af5b-4f2a-ade4-f7d1b0f6f531" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400
+                      rounded-lg cursor-pointer hover:hover:-translate-y-1 duration-500 ">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Ffirebase.png?alt=media&token=9919166f-1a4b-4ad6-b3aa-563b20f2c506" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400
+                      rounded-lg cursor-pointer hover:hover:-translate-y-1 duration-500 ">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fmongodb.png?alt=media&token=fdc128f4-5ae9-40e2-a2bc-e996b3e7a676" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400
+                      rounded-lg cursor-pointer hover:hover:-translate-y-1 duration-500 ">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Ffigma.png?alt=media&token=ddf1c5f5-e68c-4814-91c6-f8702ad9edd3" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400
+                      rounded-lg cursor-pointer hover:hover:-translate-y-1 duration-500 ">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fgit.png?alt=media&token=b62736c2-0229-4cf0-8001-bd4628fd6048" alt="" class="w-5 sm:w-7">
+                    </li>
+                 </ul>
+
+        </div>
+    </div>
+
+
+ </div>
+
+ <!----------- --------Services--------------------------- -->
+
+ <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg">What i cover</h4>
+    <h2 class="text-center text-5xl">My Services</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12">I am a frontend developer from California,
+         USA with 10 years of experience in multiple companies
+          like Microsoft, Tesla and Apple.</p>
+          
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="border border-gray-400 rounded-lg px-8 py-12
+            hover:shadow-black cursor-pointer hover:bg-lightHover
+             hover:-translate-y-1 duration-500 ">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fweb-icon.png?alt=media&token=ecc609b3-fae7-46bc-b181-23db5f3470cd" alt="" class="w-10">
+                <h3 class="text-lg my-4 ">Web design</h3>
+                <p class="text-sm  leading-5">Web development 
+                    is the process of building, programming...</p>
+                    <a href="" class="flex items-center gap-2 text-sm mt-5 ">Read more <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fright-arrow.png?alt=media&token=8484ec17-cd82-4c0b-9053-7eef0d2bd1df" alt="" class="w-4"></a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12
+            hover:shadow-black cursor-pointer hover:bg-lightHover
+             hover:-translate-y-1 duration-500 ">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fmobile-icon.png?alt=media&token=0165c294-45d1-4ec5-8cea-26805153f39e" alt="" class="w-10">
+                <h3 class="text-lg my-4 ">Mobile app</h3>
+                <p class="text-sm  leading-5">Web development 
+                    is the process of building, programming...</p>
+                    <a href="" class="flex items-center gap-2 text-sm mt-5 ">Read more <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fright-arrow.png?alt=media&token=8484ec17-cd82-4c0b-9053-7eef0d2bd1df" alt="" class="w-4"></a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12
+            hover:shadow-black cursor-pointer hover:bg-lightHover
+             hover:-translate-y-1 duration-500 ">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fui-icon.png?alt=media&token=856402bd-b7a3-4ade-838e-589b00874f86" alt="" class="w-10">
+                <h3 class="text-lg my-4 ">UI/ UX design</h3>
+                <p class="text-sm leading-5">Web development 
+                    is the process of building, programming...</p>
+                    <a href="" class="flex items-center gap-2 text-sm mt-5 ">Read more <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fright-arrow.png?alt=media&token=8484ec17-cd82-4c0b-9053-7eef0d2bd1df" alt="" class="w-4"></a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12
+            hover:shadow-black cursor-pointer hover:bg-lightHover
+             hover:-translate-y-1 duration-500 ">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fgraphics-icon.png?alt=media&token=0bdac900-cb1f-4f34-997a-62cdcdb1dc2f" alt="" class="w-10">
+                <h3 class="text-lg my-4 ">Graphics design</h3>
+                <p class="text-sm  leading-5">Web development 
+                    is the process of building, programming...</p>
+                    <a href="" class="flex items-center gap-2 text-sm mt-5 ">Read more <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fright-arrow.png?alt=media&token=8484ec17-cd82-4c0b-9053-7eef0d2bd1df" alt="" class="w-4"></a>
+            </div>
+            
+
+          </div>
+
+ </div>
+
+ <!----------- --------my projects--------------------------- -->
+
+<div id="project" class="  w-full px-[12%] py-5 scroll-mt-10 bg-green-300 dark:bg-[#0b243a]">
+    <h4 class="text-center mb-2 text-lg">My portfolio</h4>
+    <h2 class="text-center text-5xl">My Project</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12">Welcome to my web development 
+        portfolio! Explore a collection of projects
+         showcasing my expertise in front-end development..</p>
+         
+         <a href="" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px]
+         border-gray-700 rounded-full py-3 px-10 mx-auto my-20 dark:bg-green-600 dark:text-white
+         hover:bg-[#15803d] duration-500">Show more 
+         <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fright-arrow-bold.png?alt=media&token=a7f3f31e-9edd-4aee-a80c-1efbc1b36f58" alt=""c class="w-4 dark:hidden">
+         <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fright-arrow-white.png?alt=media&token=05e7a5dd-5d15-435c-b94d-52cb33e531b4" alt=""c class="w-4 hidden dark:block" >
+        </a>
+
+
+
+</div>
+
+  <!----------- --------Contact--------------------------- -->
+
+  <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20  ">
+    <h4 class="text-center mb-2 text-lg">Connect with me</h4>
+    <h2 class="text-center text-5xl">Get in touch</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12">I'd love to hear from you!
+         If you have any questions, 
+        comments or feedback, please use the form below...</p>
+        <form method="post" action="https://api.web3forms.com/submit" class=" max-w-2xl mx-auto  ">
+            <input type="hidden" name="access_key" value="127e9d5f-0826-4dac-adb1-5521a9156fde">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-8 ">
+                <input type="text" placeholder="Enter your fullname" class="flex-1 p-3 outline-none border-[0.5px] 
+                border-gray-400 rounded-md bg-white/90 dark:bg-[#1e293b] " required name="name">
+
+                <input type="email" placeholder="Enter your Email" class="flex-1 p-3 outline-none border-[0.5px] 
+                border-gray-400 rounded-md bg-white/90 dark:bg-[#1e293b] " required name="email">
+            </div>
+            <textarea rows="6" placeholder="Enter your Massage" class="w-full p-4 outline-none border-[0.5px]
+             border-gray-400 rounded-md bg-white mb-6 dark:bg-[#1e293b] " required name="message"></textarea>
+             <button class="py-3 px-8 w-max flex items-center 
+             justify-between gap-2 bg-black/80 text-white rounded-full mx-auto bg-green-600
+             hover:bg-[#15803d] duration-500 dark:bg-green-600 dark:text-white ">Submit now <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fright-arrow-white.png?alt=media&token=05e7a5dd-5d15-435c-b94d-52cb33e531b4" alt="" class="w-4"></button>
+        </form> 
+  </div>
+
+
+ <!----------- --------Footer--------------------------- --> 
+
+
+<div  class=" mt-20 bg-black/80 text-white dark:bg-[#1e293b]">
+    <div class=" text-center sm:flex items-center justify-between border-t  border-gray-400
+    mx-[10%] mt-12 py-6">
+        <p>© 2024 Muhyadiin Jama. All rights reserved.</p>
+        <ul class=" flex items-center gap-20 justify-center mt-4 sm:mt-0">
+            <li >
+                <a href="https://www.facebook.com/Muhyadiinsimba/">
+                    <i class="fa-brands fa-facebook text-3xl  text-white"></i>
+                    <a href="https://www.instagram.com/m_simba1/">
+                   <i class="fa-brands fa-instagram text-3xl  text-white"></i>
+                
+
+                  
+                
+            </li>
+        </ul>
+
+            
+    </div>
+
+</div>
+
+
+<!----------- --------java script--------------------------- --> 
+
+<script src="script.js"></script>
+
+<!----------- --------hosting firebace script tag--------------------------- --> 
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDoiX5_IpfMwvkiH7SzhuqgB4Z_Tw7Ayug",
+      authDomain: "myweb-7.firebaseapp.com",
+      databaseURL: "https://myweb-7-default-rtdb.firebaseio.com",
+      projectId: "myweb-7",
+      storageBucket: "myweb-7.appspot.com",
+      messagingSenderId: "830875632427",
+      appId: "1:830875632427:web:4f301cdff45bd7ba6cbb6e",
+      measurementId: "G-08WGJZ6V1Q"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+
+
+</body>
+</html>
