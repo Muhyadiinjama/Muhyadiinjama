@@ -13,11 +13,12 @@
 <!-- ----------------------------Nav bar ----------------------------------->
  
     <nav class="bg-gray-200 dark:bg-[#1e293b] dark:text-white flex shadow-md fixed w-full z-50  px-5 lg:px-8 xl:px-[8%] py-4 justify-between items-center">
-        <div class="flex  py-2 items-center ">
-            <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Flogo%20(1).png?alt=media&token=69e63449-451e-4577-b92e-a723a45ea3c8" alt="logo" class=" h-12 dark:hidden ">
-            <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Flogo%20white.png?alt=media&token=2da3c78f-77c2-478b-a80e-c10f0ed4b0a6" alt="logo" class=" h-12 hidden dark:block">
-            <span class=" py-5 text-lg font-semibold dark:text-white">Muhyadiin Jama</span>
+        <div class=" flex py-4 items-center">
+            <a  href="#top"><img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Flogo%20(1).png?alt=media&token=69e63449-451e-4577-b92e-a723a45ea3c8" alt="logo" class="h-12 dark:hidden"></a>
+            <a href="#top"><img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Flogo%20white.png?alt=media&token=2da3c78f-77c2-478b-a80e-c10f0ed4b0a6" alt="logo" class="h-12  hidden dark:block"></a>
+            <a class="font-semibold items-center" href="#top">Muhyadiin jama</a>
         </div>
+        
         <ul class="hidden md:flex items-center gap-6 lg:gap-5 rounded-full px-13 py-3 ">
             <li><a href="#top" class="text-black hover:text-[#15803d] dark:text-white">Home</a></li>
             <li><a href="#about" class="text-black hover:text-[#15803d] dark:text-white">About</a></li>
@@ -53,14 +54,25 @@
           <li><a href="#project"onclick="closeMenu()">My project</a></li>
           <li><a href="#contact"onclick="closeMenu()">Contact</a></li>
 
-         </ul>
+          <ul class=" flex items-center gap-5 mt-20  items-center ">
+            <li><a href="https://github.com/Muhyadiinjama"><i class="fa-brands fa-github text-3xl"></i></a></li>
+            <li><a href="https://www.instagram.com/m_simba1/"><i class="fa-brands fa-instagram text-3xl"></i></a></li>
+            <li><a href="https://www.facebook.com/Muhyadiinsimba/"><i class="fa-brands fa-facebook text-3xl"></i></a></li>
+
+
+          </ul>
+            
+        </ul>
+
+         
+         
     </nav>
     
 
 <!------------------------- Hero Section -------------------------------------->
 
 
-<section class="min-h-screen flex flex-col justify-center items-center text-center  py-10 ">
+<section class="min-h-screen flex flex-col justify-center items-center text-center  py-5 ">
     <h1 class="text-3xl md:text-4xl font-bold ">Become a Software Engineer</h1>
     <p class="mt-6 text-lg ">Hey, I'm Muhyadiin <span class="wave">👋</span></p>
     <p class="text-lg ">I want to make a tech career possible for anyone.</p>
@@ -74,7 +86,7 @@
 <!----------- --------about me--------------------------- -->
 
 
- <div id="about" class="w-full px-[12%] py-10 mt-10 dark:bg-[#0b243a] dark:text-white bg-green-300 ">
+ <div id="about" class="w-full px-[12%] py-5 mt-10 dark:bg-[#0b243a] dark:text-white bg-green-300 ">
     <h4 class="text-center mb-2 text-lg">Introduction</h4>
     <h2 class="text-center text-5xl">About me</h2>
     <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20 ">
@@ -218,7 +230,7 @@
     <h2 class="text-center text-5xl">Get in touch</h2>
     <p class="text-center max-w-2xl mx-auto mt-5 mb-12">I'd love to hear from you!
          If you have any questions, 
-        comments or feedback, please use the form below...</p>
+        comments or feedback, please use the form below...  or <span class="font-semibold">info@muja.dev</span></p>
         <form method="post" action="https://api.web3forms.com/submit" class=" max-w-2xl mx-auto  ">
             <input type="hidden" name="access_key" value="127e9d5f-0826-4dac-adb1-5521a9156fde">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-8 ">
@@ -234,6 +246,7 @@
              justify-between gap-2 bg-black/80 text-white rounded-full mx-auto bg-green-600
              hover:bg-[#15803d] duration-500 dark:bg-green-600 dark:text-white ">Submit now <img src="https://firebasestorage.googleapis.com/v0/b/myweb-7.appspot.com/o/assets%2Fright-arrow-white.png?alt=media&token=05e7a5dd-5d15-435c-b94d-52cb33e531b4" alt="" class="w-4"></button>
         </form> 
+        
   </div>
 
 
@@ -244,18 +257,13 @@
     <div class=" text-center sm:flex items-center justify-between border-t  border-gray-400
     mx-[10%] mt-12 py-6">
         <p>© 2024 Muhyadiin Jama. All rights reserved.</p>
-        <ul class=" flex items-center gap-20 justify-center mt-4 sm:mt-0">
-            <li >
-                <a href="https://www.facebook.com/Muhyadiinsimba/">
-                    <i class="fa-brands fa-facebook text-3xl  text-white"></i>
-                    <a href="https://www.instagram.com/m_simba1/">
-                   <i class="fa-brands fa-instagram text-3xl  text-white"></i>
-                
+        <ul class=" flex items-center gap-5 mt-4 sm:items-center ">
+            <li><a href="https://github.com/Muhyadiinjama"><i class="fa-brands fa-github text-3xl"></i></a></li>
+            <li><a href="https://www.instagram.com/m_simba1/"><i class="fa-brands fa-instagram text-3xl  text-white"></i></a></li>
+            <li><a href="https://www.facebook.com/Muhyadiinsimba/"><i class="fa-brands fa-facebook text-3xl  text-white"></i></a></li>
 
-                  
-                
-            </li>
-        </ul>
+        </ul> 
+
 
             
     </div>
